@@ -14,6 +14,7 @@
 		1894344B1CEDE3C100998A3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1894344A1CEDE3C100998A3D /* Images.xcassets */; };
 		1894344E1CEDE3C100998A3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894344C1CEDE3C100998A3D /* LaunchScreen.xib */; };
 		1894345A1CEDE3C100998A3D /* ColorDiary2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434591CEDE3C100998A3D /* ColorDiary2Tests.m */; };
+		189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434641CEDE70F00998A3D /* CoreDataTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		189434531CEDE3C100998A3D /* ColorDiary2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorDiary2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189434581CEDE3C100998A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189434591CEDE3C100998A3D /* ColorDiary2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorDiary2Tests.m; sourceTree = "<group>"; };
+		189434631CEDE70F00998A3D /* CoreDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTool.h; sourceTree = "<group>"; };
+		189434641CEDE70F00998A3D /* CoreDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		1894343D1CEDE3C100998A3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				189434631CEDE70F00998A3D /* CoreDataTool.h */,
+				189434641CEDE70F00998A3D /* CoreDataTool.m */,
 				1894343E1CEDE3C100998A3D /* Info.plist */,
 				1894343F1CEDE3C100998A3D /* main.m */,
 			);
@@ -221,6 +226,7 @@
 			files = (
 				189434461CEDE3C100998A3D /* ViewController.m in Sources */,
 				189434431CEDE3C100998A3D /* AppDelegate.m in Sources */,
+				189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */,
 				189434401CEDE3C100998A3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +422,7 @@
 				1894345F1CEDE3C100998A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189434601CEDE3C100998A3D /* Build configuration list for PBXNativeTarget "ColorDiary2Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				189434621CEDE3C100998A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
