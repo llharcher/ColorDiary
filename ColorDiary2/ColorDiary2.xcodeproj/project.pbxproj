@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		189434401CEDE3C100998A3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894343F1CEDE3C100998A3D /* main.m */; };
 		189434431CEDE3C100998A3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434421CEDE3C100998A3D /* AppDelegate.m */; };
-		189434461CEDE3C100998A3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434451CEDE3C100998A3D /* ViewController.m */; };
-		189434491CEDE3C100998A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189434471CEDE3C100998A3D /* Main.storyboard */; };
 		1894344B1CEDE3C100998A3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1894344A1CEDE3C100998A3D /* Images.xcassets */; };
 		1894344E1CEDE3C100998A3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894344C1CEDE3C100998A3D /* LaunchScreen.xib */; };
 		1894345A1CEDE3C100998A3D /* ColorDiary2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434591CEDE3C100998A3D /* ColorDiary2Tests.m */; };
 		189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434641CEDE70F00998A3D /* CoreDataTool.m */; };
+		189434681CEDEA6E00998A3D /* ColorDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189434661CEDEA6E00998A3D /* ColorDiary.xcdatamodeld */; };
+		1894346B1CEDEB5900998A3D /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894346A1CEDEB5900998A3D /* Diary.m */; };
+		189434741CEDED4B00998A3D /* CDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434731CEDED4B00998A3D /* CDNavigationController.m */; };
+		189434771CEDED6B00998A3D /* CDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434761CEDED6B00998A3D /* CDHomeViewController.m */; };
+		189434811CEDF16D00998A3D /* CDComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434801CEDF16D00998A3D /* CDComposeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +36,6 @@
 		1894343F1CEDE3C100998A3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		189434411CEDE3C100998A3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189434421CEDE3C100998A3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		189434441CEDE3C100998A3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		189434451CEDE3C100998A3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		189434481CEDE3C100998A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1894344A1CEDE3C100998A3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1894344D1CEDE3C100998A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		189434531CEDE3C100998A3D /* ColorDiary2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorDiary2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +43,15 @@
 		189434591CEDE3C100998A3D /* ColorDiary2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorDiary2Tests.m; sourceTree = "<group>"; };
 		189434631CEDE70F00998A3D /* CoreDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTool.h; sourceTree = "<group>"; };
 		189434641CEDE70F00998A3D /* CoreDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTool.m; sourceTree = "<group>"; };
+		189434671CEDEA6E00998A3D /* ColorDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorDiary.xcdatamodel; sourceTree = "<group>"; };
+		189434691CEDEB5900998A3D /* Diary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diary.h; sourceTree = "<group>"; };
+		1894346A1CEDEB5900998A3D /* Diary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diary.m; sourceTree = "<group>"; };
+		189434721CEDED4B00998A3D /* CDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDNavigationController.h; sourceTree = "<group>"; };
+		189434731CEDED4B00998A3D /* CDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDNavigationController.m; sourceTree = "<group>"; };
+		189434751CEDED6B00998A3D /* CDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDHomeViewController.h; sourceTree = "<group>"; };
+		189434761CEDED6B00998A3D /* CDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDHomeViewController.m; sourceTree = "<group>"; };
+		1894347F1CEDF16D00998A3D /* CDComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDComposeViewController.h; sourceTree = "<group>"; };
+		189434801CEDF16D00998A3D /* CDComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDComposeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +93,9 @@
 		1894343C1CEDE3C100998A3D /* ColorDiary2 */ = {
 			isa = PBXGroup;
 			children = (
-				189434411CEDE3C100998A3D /* AppDelegate.h */,
-				189434421CEDE3C100998A3D /* AppDelegate.m */,
-				189434441CEDE3C100998A3D /* ViewController.h */,
-				189434451CEDE3C100998A3D /* ViewController.m */,
-				189434471CEDE3C100998A3D /* Main.storyboard */,
+				1894347D1CEDF14200998A3D /* Compose */,
+				1894347B1CEDF12A00998A3D /* Home */,
+				189434791CEDF11000998A3D /* Main */,
 				1894344A1CEDE3C100998A3D /* Images.xcassets */,
 				1894344C1CEDE3C100998A3D /* LaunchScreen.xib */,
 				1894343D1CEDE3C100998A3D /* Supporting Files */,
@@ -99,10 +106,11 @@
 		1894343D1CEDE3C100998A3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				189434631CEDE70F00998A3D /* CoreDataTool.h */,
-				189434641CEDE70F00998A3D /* CoreDataTool.m */,
+				189434781CEDEE1E00998A3D /* CoreDataTool */,
 				1894343E1CEDE3C100998A3D /* Info.plist */,
 				1894343F1CEDE3C100998A3D /* main.m */,
+				189434411CEDE3C100998A3D /* AppDelegate.h */,
+				189434421CEDE3C100998A3D /* AppDelegate.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +130,69 @@
 				189434581CEDE3C100998A3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		189434781CEDEE1E00998A3D /* CoreDataTool */ = {
+			isa = PBXGroup;
+			children = (
+				189434631CEDE70F00998A3D /* CoreDataTool.h */,
+				189434641CEDE70F00998A3D /* CoreDataTool.m */,
+				189434661CEDEA6E00998A3D /* ColorDiary.xcdatamodeld */,
+				189434691CEDEB5900998A3D /* Diary.h */,
+				1894346A1CEDEB5900998A3D /* Diary.m */,
+			);
+			name = CoreDataTool;
+			sourceTree = "<group>";
+		};
+		189434791CEDF11000998A3D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1894347A1CEDF11A00998A3D /* Controller */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		1894347A1CEDF11A00998A3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189434721CEDED4B00998A3D /* CDNavigationController.h */,
+				189434731CEDED4B00998A3D /* CDNavigationController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1894347B1CEDF12A00998A3D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1894347C1CEDF13400998A3D /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		1894347C1CEDF13400998A3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189434751CEDED6B00998A3D /* CDHomeViewController.h */,
+				189434761CEDED6B00998A3D /* CDHomeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1894347D1CEDF14200998A3D /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				1894347E1CEDF14F00998A3D /* Controller */,
+			);
+			name = Compose;
+			sourceTree = "<group>";
+		};
+		1894347E1CEDF14F00998A3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1894347F1CEDF16D00998A3D /* CDComposeViewController.h */,
+				189434801CEDF16D00998A3D /* CDComposeViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189434491CEDE3C100998A3D /* Main.storyboard in Resources */,
 				1894344E1CEDE3C100998A3D /* LaunchScreen.xib in Resources */,
 				1894344B1CEDE3C100998A3D /* Images.xcassets in Resources */,
 			);
@@ -224,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189434461CEDE3C100998A3D /* ViewController.m in Sources */,
+				189434811CEDF16D00998A3D /* CDComposeViewController.m in Sources */,
+				189434741CEDED4B00998A3D /* CDNavigationController.m in Sources */,
 				189434431CEDE3C100998A3D /* AppDelegate.m in Sources */,
 				189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */,
+				1894346B1CEDEB5900998A3D /* Diary.m in Sources */,
+				189434771CEDED6B00998A3D /* CDHomeViewController.m in Sources */,
+				189434681CEDEA6E00998A3D /* ColorDiary.xcdatamodeld in Sources */,
 				189434401CEDE3C100998A3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +324,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		189434471CEDE3C100998A3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				189434481CEDE3C100998A3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1894344C1CEDE3C100998A3D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		189434661CEDEA6E00998A3D /* ColorDiary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				189434671CEDEA6E00998A3D /* ColorDiary.xcdatamodel */,
+			);
+			currentVersion = 189434671CEDEA6E00998A3D /* ColorDiary.xcdatamodel */;
+			path = ColorDiary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 189434321CEDE3C100998A3D /* Project object */;
 }

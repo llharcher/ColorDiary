@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CDComposeViewController.h
 //  ColorDiary2
 //
 //  Created by apple on 16/5/19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CDComposeViewController : UIViewController
 
 @end
-

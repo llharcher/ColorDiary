@@ -56,8 +56,8 @@ static id _instance;
     //存储
     NSManagedObjectContext* context=self.managedObjectContext;
     Diary* diary=[NSEntityDescription insertNewObjectForEntityForName:@"Diary" inManagedObjectContext:context];
-    diary.text=text;
-    diary.date=date;
+    diary.dcontent=text;
+    diary.ddate=date;
     [self saveContext];
 }
 -(void)cdget{
@@ -71,7 +71,7 @@ static id _instance;
     NSError* error;
     NSArray* ds=[context executeFetchRequest:fr error:&error];
     for (Diary* d in ds) {
-        NSLog(@"%@ %@",d.text,d.date);
+        NSLog(@"%@ %@",d.dcontent,d.ddate);
     }
 }
 
