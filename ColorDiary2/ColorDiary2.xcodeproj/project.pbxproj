@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1888998E1CF07AA4008A1181 /* CDCheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888998D1CF07AA4008A1181 /* CDCheckBoxView.m */; };
 		189434401CEDE3C100998A3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894343F1CEDE3C100998A3D /* main.m */; };
 		189434431CEDE3C100998A3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434421CEDE3C100998A3D /* AppDelegate.m */; };
 		1894344B1CEDE3C100998A3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1894344A1CEDE3C100998A3D /* Images.xcassets */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1888998C1CF07AA4008A1181 /* CDCheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCheckBoxView.h; sourceTree = "<group>"; };
+		1888998D1CF07AA4008A1181 /* CDCheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCheckBoxView.m; sourceTree = "<group>"; };
 		1894343A1CEDE3C100998A3D /* ColorDiary2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDiary2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1894343E1CEDE3C100998A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1894343F1CEDE3C100998A3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1888998B1CF07A6F008A1181 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1888998C1CF07AA4008A1181 /* CDCheckBoxView.h */,
+				1888998D1CF07AA4008A1181 /* CDCheckBoxView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		189434311CEDE3C100998A3D = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 		1894347D1CEDF14200998A3D /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				1888998B1CF07A6F008A1181 /* View */,
 				1894347E1CEDF14F00998A3D /* Controller */,
 			);
 			name = Compose;
@@ -296,6 +309,7 @@
 			files = (
 				189434811CEDF16D00998A3D /* CDComposeViewController.m in Sources */,
 				189434741CEDED4B00998A3D /* CDNavigationController.m in Sources */,
+				1888998E1CF07AA4008A1181 /* CDCheckBoxView.m in Sources */,
 				189434431CEDE3C100998A3D /* AppDelegate.m in Sources */,
 				189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */,
 				1894346B1CEDEB5900998A3D /* Diary.m in Sources */,
