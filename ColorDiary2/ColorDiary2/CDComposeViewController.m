@@ -8,20 +8,15 @@
 
 #import "CDComposeViewController.h"
 #import "CDCheckBoxView.h"
-
-enum CDCheckBoxColor{
-    CDCheckBoxColorRed=0,
-    CDCheckBoxColorOrange,
-    CDCheckBoxColorYellow,
-    CDCheckBoxColorGreen,
-    CDCheckBoxColorCyan,
-    CDCheckBoxColorBlue,
-    CDCheckBoxColorPurple
-};
+#import "CoreDataTool.h"
+#import "CDConst.h"
+#import "MBProgressHUD+MJ.h"
 
 #define CDColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 @interface CDComposeViewController ()
 @property (nonatomic, strong) UITextView* textV;
+//当前日记颜色
+@property (nonatomic, assign)enum CDCheckBoxColor curColor;
 @end
 
 @implementation CDComposeViewController
@@ -36,7 +31,8 @@ enum CDCheckBoxColor{
     CGRect frame=CGRectMake(10, 0, 300, 250);
     UITextView* textV=[[UITextView alloc] initWithFrame:frame];
     textV.font=[UIFont systemFontOfSize:15];
-    textV.textColor=[UIColor redColor];
+    textV.textColor=[UIColor redColor];//默认颜色
+    self.curColor=CDCheckBoxColorRed;
     textV.backgroundColor=CDColor(240, 240, 240);;
     self.textV=textV;
     [self.view addSubview:textV];
@@ -50,20 +46,26 @@ enum CDCheckBoxColor{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBoxClick:) name:@"CheckBoxClickNotification" object:nil];
 }
 
+//储存日记
 -(void)send{
     if (self.textV.text==nil) {
         return;
     }
     NSDate* date=[NSDate date];
     NSDate* now=[NSDate dateWithTimeInterval:8*3600 sinceDate:date];
-    NSDateFormatter* dfm=[[NSDateFormatter alloc] init];
-    [dfm setDateFormat:@"yyyy年MM月dd日"];
-    NSString* time=[dfm stringFromDate:now];
-    NSLog(@"%@,%@",self.textV.text,time);
+    
+    CoreDataTool* cd=[CoreDataTool sharedCoreDataTool];
+    [cd cdinsertDate:now text:self.textV.text color:self.curColor];
+    //显示信息
+    [MBProgressHUD showSuccess:@"保存成功"];
+    //退出
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)checkBoxClick:(NSNotification*)notification{
+    //修改当前颜色
     UIButton* btn=notification.object;
+    self.curColor=btn.tag;
     switch (btn.tag) {
         case CDCheckBoxColorRed:
             self.textV.textColor=[UIColor redColor];

@@ -7,16 +7,8 @@
 //
 
 #import "CDCheckBoxView.h"
+#import "CDConst.h"
 
-enum CDCheckBoxColor{
-    CDCheckBoxColorRed=0,
-    CDCheckBoxColorOrange,
-    CDCheckBoxColorYellow,
-    CDCheckBoxColorGreen,
-    CDCheckBoxColorCyan,
-    CDCheckBoxColorBlue,
-    CDCheckBoxColorPurple
-};
 
 @interface CDCheckBoxView ()
 @property (nonatomic, strong) UIButton* selBtn;

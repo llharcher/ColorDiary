@@ -8,8 +8,12 @@
 
 #import "CDHomeViewController.h"
 #import "CDComposeViewController.h"
-@interface CDHomeViewController ()
+#import "CoreDataTool.h"
+#import "Diary.h"
+#import "CDHomeCell.h"
 
+@interface CDHomeViewController ()
+@property (nonatomic, strong) NSArray* diaries;
 @end
 
 @implementation CDHomeViewController
@@ -20,8 +24,12 @@
     self.title=@"日记本";
     //右边按钮
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"写日记" style:UIBarButtonItemStylePlain target:self action:@selector(compose)];
+    //加载数据
+    CoreDataTool* cd=[CoreDataTool sharedCoreDataTool];
+    self.diaries=[cd cdselect];
 }
 
+//写日记
 -(void)compose{
     CDComposeViewController* compose=[[CDComposeViewController alloc] init];
     [self.navigationController pushViewController:compose animated:YES];
@@ -34,18 +42,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.diaries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString* ID=@"cell";
-    UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell==nil) {
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-    cell.textLabel.text=@"123";
-    
+    CDHomeCell* cell=[CDHomeCell tableView:tableView cellForRowAtIndexPath:indexPath];
+    Diary* d=self.diaries[indexPath.row];
+    cell.diary=d;
     return cell;
 }
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    Diary* d=self.diaries[section];
+//    NSDateFormatter* dfm=[[NSDateFormatter alloc] init];
+//    [dfm setDateFormat:@"yyyy年MM月dd日"];
+//    NSString* time=[dfm stringFromDate:d.ddate];
+//    return time;
+//}
+
 
 @end

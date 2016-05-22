@@ -52,15 +52,16 @@ static id _instance;
 
 #pragma mark - 工具方法
 
--(void)cdinsertDate:(NSDate*)date text:(NSString*)text{
+-(void)cdinsertDate:(NSDate*)date text:(NSString*)text color:(int)color{
     //存储
     NSManagedObjectContext* context=self.managedObjectContext;
     Diary* diary=[NSEntityDescription insertNewObjectForEntityForName:@"Diary" inManagedObjectContext:context];
-    diary.dcontent=text;
     diary.ddate=date;
+    diary.dcontent=text;
+    diary.dcolor=[NSNumber numberWithInt:color];
     [self saveContext];
 }
--(void)cdget{
+-(NSArray*)cdselect{
     //查询
     NSManagedObjectContext* context=self.managedObjectContext;
     //相当于表格结构
@@ -70,9 +71,10 @@ static id _instance;
     [fr setEntity:entity];
     NSError* error;
     NSArray* ds=[context executeFetchRequest:fr error:&error];
-    for (Diary* d in ds) {
-        NSLog(@"%@ %@",d.dcontent,d.ddate);
-    }
+    return ds;
+//    for (Diary* d in ds) {
+//        NSLog(@"%@,%@,%d",d.dcontent,d.ddate,[d.dcolor intValue]);
+//    }
 }
 
 #pragma mark - Core Data stack

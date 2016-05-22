@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184556691CF1D7C3004BC3BF /* CDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 184556681CF1D7C3004BC3BF /* CDConst.m */; };
+		184556711CF1DB19004BC3BF /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845566D1CF1DB19004BC3BF /* MBProgressHUD+MJ.m */; };
+		184556721CF1DB19004BC3BF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1845566E1CF1DB19004BC3BF /* MBProgressHUD.bundle */; };
+		184556731CF1DB19004BC3BF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 184556701CF1DB19004BC3BF /* MBProgressHUD.m */; };
+		184556771CF1E22E004BC3BF /* CDHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184556761CF1E22E004BC3BF /* CDHomeCell.m */; };
 		1888998E1CF07AA4008A1181 /* CDCheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888998D1CF07AA4008A1181 /* CDCheckBoxView.m */; };
 		189434401CEDE3C100998A3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894343F1CEDE3C100998A3D /* main.m */; };
 		189434431CEDE3C100998A3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189434421CEDE3C100998A3D /* AppDelegate.m */; };
@@ -32,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184556671CF1D7C3004BC3BF /* CDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConst.h; sourceTree = "<group>"; };
+		184556681CF1D7C3004BC3BF /* CDConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDConst.m; sourceTree = "<group>"; };
+		1845566C1CF1DB19004BC3BF /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		1845566D1CF1DB19004BC3BF /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		1845566E1CF1DB19004BC3BF /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		1845566F1CF1DB19004BC3BF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		184556701CF1DB19004BC3BF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		184556751CF1E22E004BC3BF /* CDHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDHomeCell.h; sourceTree = "<group>"; };
+		184556761CF1E22E004BC3BF /* CDHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDHomeCell.m; sourceTree = "<group>"; };
 		1888998C1CF07AA4008A1181 /* CDCheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCheckBoxView.h; sourceTree = "<group>"; };
 		1888998D1CF07AA4008A1181 /* CDCheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCheckBoxView.m; sourceTree = "<group>"; };
 		1894343A1CEDE3C100998A3D /* ColorDiary2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDiary2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +89,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184556661CF1D7A5004BC3BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				184556671CF1D7C3004BC3BF /* CDConst.h */,
+				184556681CF1D7C3004BC3BF /* CDConst.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		1845566A1CF1DB0E004BC3BF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				1845566B1CF1DB19004BC3BF /* MBProgressHUD */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		1845566B1CF1DB19004BC3BF /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1845566C1CF1DB19004BC3BF /* MBProgressHUD+MJ.h */,
+				1845566D1CF1DB19004BC3BF /* MBProgressHUD+MJ.m */,
+				1845566E1CF1DB19004BC3BF /* MBProgressHUD.bundle */,
+				1845566F1CF1DB19004BC3BF /* MBProgressHUD.h */,
+				184556701CF1DB19004BC3BF /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		184556741CF1E20F004BC3BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				184556751CF1E22E004BC3BF /* CDHomeCell.h */,
+				184556761CF1E22E004BC3BF /* CDHomeCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		1888998B1CF07A6F008A1181 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +211,8 @@
 		189434791CEDF11000998A3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1845566A1CF1DB0E004BC3BF /* Lib */,
+				184556661CF1D7A5004BC3BF /* Tool */,
 				1894347A1CEDF11A00998A3D /* Controller */,
 			);
 			name = Main;
@@ -176,6 +230,7 @@
 		1894347B1CEDF12A00998A3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				184556741CF1E20F004BC3BF /* View */,
 				1894347C1CEDF13400998A3D /* Controller */,
 			);
 			name = Home;
@@ -290,6 +345,7 @@
 			files = (
 				1894344E1CEDE3C100998A3D /* LaunchScreen.xib in Resources */,
 				1894344B1CEDE3C100998A3D /* Images.xcassets in Resources */,
+				184556721CF1DB19004BC3BF /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +365,13 @@
 			files = (
 				189434811CEDF16D00998A3D /* CDComposeViewController.m in Sources */,
 				189434741CEDED4B00998A3D /* CDNavigationController.m in Sources */,
+				184556771CF1E22E004BC3BF /* CDHomeCell.m in Sources */,
+				184556691CF1D7C3004BC3BF /* CDConst.m in Sources */,
 				1888998E1CF07AA4008A1181 /* CDCheckBoxView.m in Sources */,
 				189434431CEDE3C100998A3D /* AppDelegate.m in Sources */,
+				184556711CF1DB19004BC3BF /* MBProgressHUD+MJ.m in Sources */,
 				189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */,
+				184556731CF1DB19004BC3BF /* MBProgressHUD.m in Sources */,
 				1894346B1CEDEB5900998A3D /* Diary.m in Sources */,
 				189434771CEDED6B00998A3D /* CDHomeViewController.m in Sources */,
 				189434681CEDEA6E00998A3D /* ColorDiary.xcdatamodeld in Sources */,

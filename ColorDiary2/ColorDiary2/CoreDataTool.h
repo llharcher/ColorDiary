@@ -11,6 +11,8 @@
 
 @interface CoreDataTool : NSObject
 +(instancetype)sharedCoreDataTool;
--(void)cdinsertDate:(NSDate*)date text:(NSString*)text;
--(void)cdget;
+//插入数据
+-(void)cdinsertDate:(NSDate*)date text:(NSString*)text color:(int)color;
+//查询数据
+-(NSArray*)cdselect;
 @end
