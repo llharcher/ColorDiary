@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Diary;
+@class DiaryFrame;
 
 @interface CDHomeCell : UITableViewCell
-@property (nonatomic, strong) Diary* diary;
+@property (nonatomic, strong) DiaryFrame* diaryF;
 + (CDHomeCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

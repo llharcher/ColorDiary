@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1808B2B21CF31BBE008A63F1 /* DiaryFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808B2B11CF31BBE008A63F1 /* DiaryFrame.m */; };
 		184556691CF1D7C3004BC3BF /* CDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 184556681CF1D7C3004BC3BF /* CDConst.m */; };
 		184556711CF1DB19004BC3BF /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845566D1CF1DB19004BC3BF /* MBProgressHUD+MJ.m */; };
 		184556721CF1DB19004BC3BF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1845566E1CF1DB19004BC3BF /* MBProgressHUD.bundle */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1808B2B01CF31BBE008A63F1 /* DiaryFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryFrame.h; sourceTree = "<group>"; };
+		1808B2B11CF31BBE008A63F1 /* DiaryFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryFrame.m; sourceTree = "<group>"; };
 		184556671CF1D7C3004BC3BF /* CDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConst.h; sourceTree = "<group>"; };
 		184556681CF1D7C3004BC3BF /* CDConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDConst.m; sourceTree = "<group>"; };
 		1845566C1CF1DB19004BC3BF /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1808B2AF1CF31B9C008A63F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1808B2B01CF31BBE008A63F1 /* DiaryFrame.h */,
+				1808B2B11CF31BBE008A63F1 /* DiaryFrame.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		184556661CF1D7A5004BC3BF /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +242,7 @@
 		1894347B1CEDF12A00998A3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1808B2AF1CF31B9C008A63F1 /* Model */,
 				184556741CF1E20F004BC3BF /* View */,
 				1894347C1CEDF13400998A3D /* Controller */,
 			);
@@ -368,6 +381,7 @@
 				184556771CF1E22E004BC3BF /* CDHomeCell.m in Sources */,
 				184556691CF1D7C3004BC3BF /* CDConst.m in Sources */,
 				1888998E1CF07AA4008A1181 /* CDCheckBoxView.m in Sources */,
+				1808B2B21CF31BBE008A63F1 /* DiaryFrame.m in Sources */,
 				189434431CEDE3C100998A3D /* AppDelegate.m in Sources */,
 				184556711CF1DB19004BC3BF /* MBProgressHUD+MJ.m in Sources */,
 				189434651CEDE70F00998A3D /* CoreDataTool.m in Sources */,

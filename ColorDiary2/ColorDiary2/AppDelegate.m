@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor blueColor];
-    CDHomeViewController* home=[[CDHomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    CDHomeViewController* home=[[CDHomeViewController alloc] initWithStyle:UITableViewStylePlain];
     CDNavigationController* nav=[[CDNavigationController alloc] initWithRootViewController:home];
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];

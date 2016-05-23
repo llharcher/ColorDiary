@@ -11,22 +11,43 @@
 #import "CoreDataTool.h"
 #import "Diary.h"
 #import "CDHomeCell.h"
+#import "DiaryFrame.h"
 
 @interface CDHomeViewController ()
-@property (nonatomic, strong) NSArray* diaries;
+@property (nonatomic, strong) NSMutableArray* diariesF;
 @end
 
 @implementation CDHomeViewController
 
+-(NSMutableArray *)diariesF{
+    if (!_diariesF) {
+        _diariesF=[[NSMutableArray alloc] init];
+    }
+    return _diariesF;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //标题
-    self.title=@"日记本";
+    self.title=@"颜色日记本";
     //右边按钮
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"写日记" style:UIBarButtonItemStylePlain target:self action:@selector(compose)];
+    //取消cell间分割线
+    self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //加载数据
+    [self.diariesF removeAllObjects];//清空
     CoreDataTool* cd=[CoreDataTool sharedCoreDataTool];
-    self.diaries=[cd cdselect];
+    NSArray* diaries=[cd cdselect];
+    for (Diary* d in diaries) {
+        DiaryFrame* df=[[DiaryFrame alloc] init];
+        df.diary=d;
+        [self.diariesF insertObject:df atIndex:0];
+    }
+    [self.tableView reloadData];
 }
 
 //写日记
@@ -42,23 +63,20 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.diaries.count;
+    return self.diariesF.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CDHomeCell* cell=[CDHomeCell tableView:tableView cellForRowAtIndexPath:indexPath];
-    Diary* d=self.diaries[indexPath.row];
-    cell.diary=d;
+    DiaryFrame* df=self.diariesF[indexPath.row];
+    cell.diaryF=df;
     return cell;
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    Diary* d=self.diaries[section];
-//    NSDateFormatter* dfm=[[NSDateFormatter alloc] init];
-//    [dfm setDateFormat:@"yyyy年MM月dd日"];
-//    NSString* time=[dfm stringFromDate:d.ddate];
-//    return time;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DiaryFrame* df=self.diariesF[indexPath.row];
+    return df.cellHeight;
+}
 
 
 @end

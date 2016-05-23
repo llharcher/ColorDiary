@@ -12,7 +12,6 @@
 #import "CDConst.h"
 #import "MBProgressHUD+MJ.h"
 
-#define CDColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 @interface CDComposeViewController ()
 @property (nonatomic, strong) UITextView* textV;
 //当前日记颜色
@@ -25,6 +24,8 @@
     [super viewDidLoad];
     self.title=@"写日记";
     self.view.backgroundColor=[UIColor whiteColor];
+    //左边按钮
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"不写了" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     //右边按钮
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"写完啦" style:UIBarButtonItemStylePlain target:self action:@selector(send)];
     //输入框
@@ -36,30 +37,39 @@
     textV.backgroundColor=CDColor(240, 240, 240);;
     self.textV=textV;
     [self.view addSubview:textV];
+    //提示
+    UILabel* ts=[[UILabel alloc] init];
+    ts.text=@"请选择今天的心情：";
+    ts.textColor=CDColor(22, 93, 255);
+    ts.frame=CGRectMake(10, 255, 300, 20);
+    ts.font=[UIFont systemFontOfSize:15];
+    [self.view addSubview:ts];
     //颜色选择器
     CDCheckBoxView* cb=[CDCheckBoxView colorCheckBox];
     CGRect f=cb.frame;
-    f.origin.y=300;
+    f.origin.y=280;
     cb.frame=f;
     [self.view addSubview:cb];
     //接受通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBoxClick:) name:@"CheckBoxClickNotification" object:nil];
 }
 
-//储存日记
--(void)send{
-    if (self.textV.text==nil) {
-        return;
-    }
-    NSDate* date=[NSDate date];
-    NSDate* now=[NSDate dateWithTimeInterval:8*3600 sinceDate:date];
-    
-    CoreDataTool* cd=[CoreDataTool sharedCoreDataTool];
-    [cd cdinsertDate:now text:self.textV.text color:self.curColor];
-    //显示信息
-    [MBProgressHUD showSuccess:@"保存成功"];
+-(void)back{
     //退出
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+//储存日记
+-(void)send{
+    if (![self.textV.text isEqual:@""]) {
+        NSDate* date=[NSDate date];
+        CoreDataTool* cd=[CoreDataTool sharedCoreDataTool];
+        [cd cdinsertDate:date text:self.textV.text color:self.curColor];
+        //显示信息
+        [MBProgressHUD showSuccess:@"保存成功"];
+        //退出
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 -(void)checkBoxClick:(NSNotification*)notification{
